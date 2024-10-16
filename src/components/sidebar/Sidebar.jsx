@@ -8,6 +8,8 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import SchoolIcon from '@mui/icons-material/School';
+import CloseFriend from '../closefriend/CloseFriend';
+import { users } from '../../DummyData';
 function Sidebar() {
     return (
         <div className='sidebar'>
@@ -83,63 +85,9 @@ function Sidebar() {
                 </ul>
                 <button className="sidebarButton">Show More</button> <hr className='sidebarHr'/>
                 <ul className="sidebarFriendList">
-                    <li className="sidebarFriend">
-                        <img src="/assets/person/rand02.png" alt="" className="sidebarFriendImg" />
-                        <span className='sidebarFriendName'>Rose Dyn</span>
-                    </li>
-
-                    <li className="sidebarFriend">
-                        <img src="/assets/person/rand02.png" alt="" className="sidebarFriendImg" />
-                        <span className='sidebarFriendName'>Rose Dyn</span>
-                    </li>
-
-                    <li className="sidebarFriend">
-                        <img src="/assets/person/rand02.png" alt="" className="sidebarFriendImg" />
-                        <span className='sidebarFriendName'>Rose Dyn</span>
-                    </li>
-
-                    <li className="sidebarFriend">
-                        <img src="/assets/person/rand02.png" alt="" className="sidebarFriendImg" />
-                        <span className='sidebarFriendName'>Rose Dyn</span>
-                    </li>
-
-
-                    <li className="sidebarFriend">
-                        <img src="/assets/person/rand02.png" alt="" className="sidebarFriendImg" />
-                        <span className='sidebarFriendName'>Rose Dyn</span>
-                    </li>
-
-
-
-                    <li className="sidebarFriend">
-                        <img src="/assets/person/rand02.png" alt="" className="sidebarFriendImg" />
-                        <span className='sidebarFriendName'>Rose Dyn</span>
-                    </li>
-
-
-                    <li className="sidebarFriend">
-                        <img src="/assets/person/rand02.png" alt="" className="sidebarFriendImg" />
-                        <span className='sidebarFriendName'>Rose Dyn</span>
-                    </li>
-
-
-                    <li className="sidebarFriend">
-                        <img src="/assets/person/rand02.png" alt="" className="sidebarFriendImg" />
-                        <span className='sidebarFriendName'>Rose Dyn</span>
-                    </li>
-
-
-                    <li className="sidebarFriend">
-                        <img src="/assets/person/rand02.png" alt="" className="sidebarFriendImg" />
-                        <span className='sidebarFriendName'>Rose Dyn</span>
-                    </li>
-
-
-                    <li className="sidebarFriend">
-                        <img src="/assets/person/rand02.png" alt="" className="sidebarFriendImg" />
-                        <span className='sidebarFriendName'>Rose Dyn</span>
-                    </li>
-
+                    {users.map(u=>
+                <CloseFriend user={u} key={u?.id} />
+                    )}
                 </ul>
             </div>
         </div>
